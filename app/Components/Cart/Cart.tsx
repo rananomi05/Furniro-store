@@ -17,8 +17,8 @@ export default function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
-  const handleRemove = (id: number) => {
-  dispatch(removeFromCart(id.toString()));
+ const handleRemove = (id: string) => {
+  dispatch(removeFromCart(id));
 };
 
   const total = cartItems.reduce(
@@ -104,7 +104,7 @@ export default function Cart() {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <button
-                        onClick={() => handleRemove(item.id)}
+                         onClick={() => handleRemove(item.id)}
                         className="text-red-500 hover:text-red-700"
                       >
                         <FontAwesomeIcon icon={faTrash} />
