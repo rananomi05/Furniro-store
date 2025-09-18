@@ -16,8 +16,8 @@ export default function Cart() {
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const handleRemove = (id: number) => {
-    dispatch(removeFromCart(id));
-  };
+  dispatch(removeFromCart(id.toString()));
+};
 
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
