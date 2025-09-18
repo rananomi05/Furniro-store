@@ -11,6 +11,8 @@ import Footer2 from "../Footer/Footer2";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
 
+
+
 export default function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
@@ -70,11 +72,11 @@ export default function Cart() {
                     <td className="px-4 py-3 flex items-center space-x-3">
                       <img
                         src={item.image}
-                        alt={item.title}
+                        alt={item.name}
                         className="w-16 h-16 rounded object-cover"
                       />
                       <span className="font-medium text-[#9F9F9F]">
-                        {item.title}
+                        {item.name}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-[#9F9F9F]">
