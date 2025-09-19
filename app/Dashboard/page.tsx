@@ -44,7 +44,7 @@ const orders = [
     total: 3000, status: "Cancelled" },
 ];
 
-export default function DashboardPage(): JSX.Element {
+export default function DashboardPage(){
      const { data: session, status } = useSession();
 
   if (status === "loading") return <p>Loading...</p>;
